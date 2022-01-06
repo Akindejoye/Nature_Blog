@@ -1,0 +1,57 @@
+.register {
+  height: calc(100vh - 5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+      rgba(225, 225, 255, 0.5),
+      rgba(225, 225, 255, 0.5)
+    ),
+    url("https://previews.123rf.com/images/hedgehog/hedgehog1306/hedgehog130600627/20191569-sexy-wet-woman.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.registerTitle {
+  font-size: 5rem;
+}
+
+.registerForm {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.registerForm > label {
+  margin: 1rem 0;
+}
+
+.registerInput {
+  padding: 1rem;
+  background-color: #fff;
+  border: none;
+  outline: none;
+}
+
+.registerButton {
+  margin-top: 2rem;
+  cursor: pointer;
+  background-color: teal;
+  border: none;
+  color: #fff;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.registerLoginButton {
+  position: absolute;
+  top: 6rem;
+  right: 2rem;
+  background-color: lightcoral;
+  cursor: pointer;
+  border: none;
+  padding: 1rem;
+  color: #fff;
+  border-radius: 1rem;
+}
