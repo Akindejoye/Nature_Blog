@@ -24,14 +24,14 @@ const Write = () => {
             data.append('file', file);
             newPost.photo = filename;
             try {
-                await axios.post('https://nature-blog-new.herokuapp.com/upload', data);
+                await axios.post('https://nature-essence-blog.herokuapp.com/api/upload', data);
             } catch(err) {
                 console.log(err);
             }
         }
         try {
-           const res = await axios.post('https://nature-blog-new.herokuapp.com/posts', newPost);
-           window.location.replace('https://nature-blog-new.herokuapp.com/post/' + res.data._id);
+           const res = await axios.post('https://nature-essence-blog.herokuapp.com/api/posts', newPost);
+           window.location.replace('https://nature-essence-blog.herokuapp.com/api/post/' + res.data._id);
         } catch (err) {
             console.log(err);
         }

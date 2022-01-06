@@ -9,7 +9,7 @@ const Sidebar = () => {
 
     useEffect(() => {
         const getCats = async () => {
-            const res = await axios.get("https://nature-blog-new.herokuapp.com/categories");
+            const res = await axios.get("https://nature-essence-blog.herokuapp.com/api/categories");
             console.log(res)
             setCats(res.data);
         };

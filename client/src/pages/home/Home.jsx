@@ -6,7 +6,6 @@ import Posts from './../../components/posts/Posts';
 import Sidebar from './../../components/sidebar/Sidebar';
 import { useLocation } from 'react-router';
 
-const api = "http://localhost:7000/api/";
 
 const Home = () => {
 
@@ -15,7 +14,7 @@ const Home = () => {
 
     useEffect(() =>{
         const fetchPosts = async () => {
-            const res = await axios.get('https://nature-blog-new.herokuapp.com/posts'+search)
+            const res = await axios.get('https://nature-essence-blog.herokuapp.com/api/posts'+search)
             setPosts(res.data)
         }
 

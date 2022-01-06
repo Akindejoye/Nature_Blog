@@ -14,7 +14,7 @@ const Login = () => {
         e.preventDefault();
         dispatch({type:'LOGIN_START'});
         try {
-            const res = await axios.post('https://nature-blog-new.herokuapp.com/auth/login', {
+            const res = await axios.post('https://nature-essence-blog.herokuapp.com/api/auth/login', {
                 username: userRef.current.value,
                 password: passwordRef.current.value,
             });

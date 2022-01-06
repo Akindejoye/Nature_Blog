@@ -14,7 +14,7 @@ const Register = () => {
         e.preventDefault();
         setError(false);
         try {
-            const res = await axios.post("https://nature-blog-new.herokuapp.com/auth/register", {
+            const res = await axios.post("https://nature-essence-blog.herokuapp.com/api/auth/register", {
                 username,
                 email,
                 password,

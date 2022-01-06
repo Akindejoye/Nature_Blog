@@ -31,13 +31,13 @@ const Settings = () => {
             data.append('file', file);
             updatedUser.profilePic = filename;
             try {
-                await axios.post('https://nature-blog-new.herokuapp.com/upload', data);
+                await axios.post('https://nature-essence-blog.herokuapp.com/api/upload', data);
             } catch(err) {
                 console.log(err);
             }
         }
         try {
-            const res = await axios.put('https://nature-blog-new.herokuapp.com/users/'+user._id, updatedUser);
+            const res = await axios.put('https://nature-essence-blog.herokuapp.com/api/users/'+user._id, updatedUser);
             setSuccess(true);
             dispatch({ type:"UPDATE_SUCCESS", payload: res.data });
         } catch (err) {
