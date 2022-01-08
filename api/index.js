@@ -29,9 +29,19 @@ mongoose.connect(process.env.MONGO_URL, {
 .then(console.log('Connected to MongoDB'))
 .catch(err => console.log(err));
 
+// Serve static assets if in production
 if (process.env.NODE_ENV === 'production') {
+
+    // Set static folder
+    // All the javascript and css files will be read and served from this folder
     app.use(express.static('client/build'));
+    
+    // index.html for all page routes
+    app.get("*", (req, res) => {
+        res.sendFile(path.resolve(__dirname, "../client", "build", "index.html"));
+    });
 }
+
 
 const storage = multer.diskStorage({
     destination:(req, file, cb) => {
